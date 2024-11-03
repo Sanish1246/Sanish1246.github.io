@@ -1,21 +1,44 @@
-/**{
+/*IMporting fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B');
+
+*{
     padding:0;
     margin:0;
     font-family:"Poppins", sans-serif;
     box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 body{
     width:100%;
-    height:100vh;
+    height:auto;
     background-color: black;
-    overflow:hidden;
+    overflow-x:hidden;
 }
 
+/*Making a custom scorllbar*/
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background: white;
+}
+
+::-webkit-scrollbar-thumb{
+    background: hsl(0, 100%, 55%);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: hsl(0, 100%, 55%);
+}
+/*Navigation bar*/
 nav{
     width:100%;
     height:10vh;
-    position:sticky;
 }
 
 .nav-container{
@@ -44,8 +67,11 @@ nav{
     right: 15px;
     top: 10px;
     color: white;
-    display: none;
-    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+    opacity:0;
+    pointer-events:none;
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem); /*Dynamic font size*/
+    /*0.5rem + 5vw adds 5 viewport widths and 0.5 rem*/
+    /*2.5 rem is min size and 3 rem is max size*/
 } 
 
 .nav-container .links{
@@ -53,6 +79,7 @@ nav{
 }
 
 .nav-container .links a{
+    position:relative;
     font-size: 1.2 rem;
     color: white;
     margin: 0 20px;
@@ -61,16 +88,33 @@ nav{
     transition: 0.3s linear;
 }
 
+/*Inserting content before the links*/
+.nav-container .links a:before{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left:0;
+    width:0%;
+    height:3px;
+    background-color: hsl(0, 100%, 50%);
+    transition: 0.2s linear;
+}
+
+.nav-container .links a:hover::before{
+    width:100%;
+}
+
 .nav-container .links a:hover{
     color:hsl(0, 100%, 50%);
     border-bottom: 2px solid hsl(0, 100%, 50%);
 }
 
+/*Dropdown menu*/
 .dropdown{
     z-index: 100;
     position: absolute;
     top: 0;
-    transform: translateY(-500px);
+    transform: translateY(-500px); /*invisible*/
     width: 100%;
     height: auto;
     backdrop-filter: blur(4px) brightness(40%);
@@ -81,7 +125,6 @@ nav{
 .dropdown .links a{
     display: flex;
     color: white;
-    text-decoration: none;
     text-decoration: none;
     padding: 15px 0;
     justify-content: center;
@@ -95,13 +138,121 @@ nav{
 
 section{
     width: 100%;
-    height: 90vh;
+    min-height: 90vh;
 }
 
-.main-container{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-evenly;
+/*Introductory section*/
+section .main-container{
+    display:flex;
+    justify-content: space-between;
+    padding-left:100px;
     align-items: center;
+}
+
+
+.main-container .image{
+    width:500px;
+    height: 80vh;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 50px hsl(0, 100%, 55%);
+}
+
+.main-container .image img{
+    width:100%;
+    height:100%;
+}
+
+
+.main-container .image:hover{
+    animation: animate 1.5s ease-in-out infinite;
+}
+
+/*scaling the image*/
+@keyframes animate{
+    0%{
+        scale:1;
+    }
+
+    50%{
+        scale:1.05;
+    }
+
+    100%{
+        scale:1;
+    }
+}
+
+.main-container .content{
+    color:white;
+    width:50%;
+}
+
+.content h1{
+    font-size: clamp(4.5rem, 1rem + 5vw, 1.8rem);
+}
+
+.content h1 span{
+    color:hsl(0, 100%, 50%);
+    text-shadow: 0 0 10px hsl(0, 100%, 50%);
+}
+
+.content .typewriter{
+    font-size: clamp(2rem, 1rem + 5vw, 2.5rem);
+    font-weight: 600;
+}
+
+.content .typewriter-text{
+    color: hsl(0, 100%, 50%);
+    text-shadow:hsl(0, 100%, 50%)
+}
+
+.content p{
+    font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
+    margin: 10px 0;
+}
+
+.socials i{
+    padding-top:0.5rem;
+    display: inline-flex; /*makes the content flexible while keeping the container on the same line*/
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 0.2rem solid hsl(0, 100%, 50%);
+    border-radius: 50%;
+    color:hsl(0, 100%, 50%);
+    margin: 5px 15px;
+    font-size:1.5rem;
+    transition: 0.2s linear;
+}
+
+.socials i:hover{
+    scale:1.3;
+    color:black;
+    background-color: hsl(0, 100%, 50%);
+    filter: drop-shadow(0 0 10px hsl(0, 100%,30%));
+}
+
+.content button{
+    width: 50%;
+    height: 6vh;
+    margin: 30px;
+    background-color:hsl(0, 100%, 55%);
+    color:white;
+    border: none;
+    outline:none;
+    font-size:120%;
+    font-weight:700;
+    border-radius:5px;
+    transition: 0.2s linear;
+}
+
+.content button:hover{
+    scale:1.1;
+    color:hsl(0, 100%, 50%);
+    border: 2px solid hsl(0, 100%, 50%);
+    background-color: transparent;
+    font-weight:700;
+    box-shadow: 0 0 40px hsl(0, 100%, 50%);
 }
