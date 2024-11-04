@@ -203,8 +203,20 @@ section .main-container{
 }
 
 .content .typewriter-text{
-    color: hsl(0, 100%, 50%);
-    text-shadow:hsl(0, 100%, 50%)
+    position: relative;
+    color: hsl(0, 100%, 55%);
+    text-shadow:0 0 10px hsl(0, 100%, 50%)
+}
+
+.content .typewriter-text::before{
+    content:"";
+    right: -8px;
+    top:50%;
+    height:30px;
+    width:2px;
+    background:hsl(0, 100%, 50%);
+    transform: translateY(-45%);
+    animation: blink 0.7s infinite;
 }
 
 .content p{
@@ -255,6 +267,7 @@ section .main-container{
     background-color: transparent;
     font-weight:700;
     box-shadow: 0 0 40px hsl(0, 100%, 50%);
+    cursor:pointer;
 }
 
 /*About section*/
@@ -583,11 +596,11 @@ section .topic{
     display: flex; /* Flexible display */
     align-items: center; /* Ensure icon and text are aligned vertically */
     justify-content: center; /* Center content within the icon area */
-    width: auto; /* Adjust width as needed */
+    width: auto; 
     height: auto;
     background-color: transparent;
     color: hsl(0, 100%, 50%);
-    margin: 5px 0; /* Adjust the margin between items */
+    margin: 5px 0; 
     font-size: 1.5rem;
 }
   

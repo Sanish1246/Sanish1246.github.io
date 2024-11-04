@@ -1,3 +1,35 @@
+const typewriter = document.getElementById("typewriter-text");
+const words = ["Developer", "Problem solver", "Programmer"];
+
+let wordIndex=0;
+let charIndex=1;
+let deleting=false;
+
+const typing = () => {
+    const currentWord = words[wordIndex];
+    const currentChar = currentWord.substring(0, charIndex);
+    console.log(typewriter);
+    typewriter.textContent=currentChar;
+
+    if(!deleting && charIndex < currentWord.length) {
+        charIndex++;
+        setTimeout(typing,200);
+    } else if(deleting && charIndex>0) {
+        charIndex--;
+        setTimeout(typing,100);
+    } else {
+        deleting = !deleting;
+        wordIndex = !deleting ? (wordIndex+1 )% words.length : wordIndex;
+        setTimeout(typing,1200);
+    }
+}
+
+typing();
+
+
+
+
+
 const swiper = new Swiper('.projects .content', {
   loop: true,
   spaceBetween: 30,
