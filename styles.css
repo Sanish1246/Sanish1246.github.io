@@ -509,10 +509,6 @@ section .topic{
     transform: scale(0.9, 0.85);
 }
 
-.swiper-slide {
-    transform: scale(0.9, 0.9); /* Riduce la dimensione delle slide al 90% della dimensione originale */
-}
-
 
   
 
