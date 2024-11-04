@@ -456,12 +456,13 @@ section .topic{
 
 
 .card-list .card.item .card.link{
-    width: 400px;
+    user-select: none;
     display: block;
     padding:18px;
     border-radius:12px;
     text-decoration: none;
     color:white;
+    user-select:none;
 }
 
 .card-list .card-link .card-image{
@@ -469,6 +470,7 @@ section .topic{
     height: 100%;
     object-fit: cover;
     border-radius:10px;
+    transform: scale(1.0);
 }
 
 .card-title{
@@ -478,6 +480,7 @@ section .topic{
 }
 
 .card-button{
+    padding-top: 0px;
     height: 35px;
     width: 35px;
     border-radius: 50%;
@@ -494,12 +497,24 @@ section .topic{
     color:black;
     background-color: hsl(0, 100%, 50%);
     filter: drop-shadow(0 0 10px hsl(0, 100%,30%));
-    border: 2px solid hsl(0, 100%, 50%);;
+    border: 2px solid hsl(0, 30%, 51%);;
 }
 
 .projects p{
     color: white;
 }
+
+.swiper{
+    height: 50rem;
+    transform: scale(0.8, 0.8);
+}
+
+.swiper-slide {
+    transform: scale(0.9, 0.9); /* Riduce la dimensione delle slide al 90% della dimensione originale */
+}
+
+
+  
 
 
 
