@@ -558,8 +558,44 @@ section .topic{
     }
 }
 
+/*Contact section*/
+.contact{
+    min-height:50vh;
+}
 
+.contact .contact-text {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;    /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    margin: 0; /* Remove any excess margin that affects centering */
+    height: 100%; 
+    gap:1rem;
+}
+
+.contact .contact-text span {
+    color: white;
+    text-align: center;
+}
+
+.contact i {
+    padding-top: 0.5rem;
+    display: flex; /* Flexible display */
+    align-items: center; /* Ensure icon and text are aligned vertically */
+    justify-content: center; /* Center content within the icon area */
+    width: auto; /* Adjust width as needed */
+    height: auto;
+    background-color: transparent;
+    color: hsl(0, 100%, 50%);
+    margin: 5px 0; /* Adjust the margin between items */
+    font-size: 1.5rem;
+}
   
+/*Footer*/
+footer{
+    color:white;
+    justify-self: center;
+}
 
 
 
