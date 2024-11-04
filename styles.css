@@ -438,7 +438,23 @@ section .topic{
     justify-content: center;
     min-height: 100vh;
     background: black;
+    max-width: 1100px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow:hidden;
 }
+
+.projects .content .swiper-pagination-bullet{
+    height: 13px;
+    width: 13px;
+    opacity:0.5;
+    background: white;
+}
+
+.projects .content .swiper-pagination-bullet-active{
+    opacity:1;
+}
+
 
 .card-list .card-item{
     background: black;
@@ -466,11 +482,10 @@ section .topic{
 }
 
 .card-list .card-link .card-image{
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 800%;
     object-fit: cover;
     border-radius:10px;
-    transform: scale(1.0);
 }
 
 .card-title{
@@ -504,9 +519,43 @@ section .topic{
     color: white;
 }
 
-.swiper{
-    height: 50rem;
-    transform: scale(0.9, 0.85);
+.swiper {
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto; /* Centering the swiper in its container */
+    box-sizing: border-box;
+}
+
+.swiper-slide {
+    width: auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-wrapper {
+    display: flex;
+    transition-timing-function: ease;
+}
+
+.content .swiper-slide-button{
+    color:white;
+    margin-top:-35px;
+}
+
+.content .swiper-slide-button:hover{
+    text-shadow: 0 0 10px whitesmoke;
+}
+
+/* For phones display*/
+@media screen and (max-width:768px) {
+    .projects .content{
+        margin: 0 10 px 25px;
+    }
+
+    .content .swiper-slide-button{
+        display:none;
+    }
 }
 
 
