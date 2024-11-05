@@ -142,45 +142,14 @@ section{
 }
 
 /*Introductory section*/
+.intro {
+    min-height: 60vh;
+}
+
 section .main-container{
     display:flex;
-    justify-content: space-between;
     padding-left:100px;
     align-items: center;
-}
-
-
-.main-container .image{
-    width:500px;
-    height: 80vh;
-    border-radius: 100%;
-    overflow: hidden;
-    box-shadow: 0 0 50px hsl(0, 100%, 55%);
-}
-
-.main-container .image img{
-    width:100%;
-    height:100%;
-}
-
-
-.main-container .image:hover{
-    animation: animate 1.5s ease-in-out infinite;
-}
-
-/*scaling the image*/
-@keyframes animate{
-    0%{
-        scale:1;
-    }
-
-    50%{
-        scale:1.05;
-    }
-
-    100%{
-        scale:1;
-    }
 }
 
 .main-container .content{
@@ -573,7 +542,7 @@ section .topic{
 
 /*Contact section*/
 .contact{
-    min-height:50vh;
+    min-height:35vh;
 }
 
 .contact .contact-text {
@@ -583,7 +552,7 @@ section .topic{
     justify-content: center; /* Center items vertically */
     margin: 0; /* Remove any excess margin that affects centering */
     height: 100%; 
-    gap:1rem;
+    gap:0.5rem;
 }
 
 .contact .contact-text span {
@@ -606,8 +575,119 @@ section .topic{
   
 /*Footer*/
 footer{
+    height:3.5rem;
+    background-color: hsl(0, 100%, 50%);
+    width: 100%;
     color:white;
-    justify-self: center;
+    text-align: center;
+}
+
+/*Adding responsive element*/
+@media (max-width:1000px){
+    .about .about-details{
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .about .about-details .left{
+        display: flex;
+        justify-content: center;
+        width:100%;
+    }
+
+    .about .about-details .right{
+        width:90%;
+        margin: 40px 0;
+    }
+
+    .services .boxes .box{
+        margin: 20px 0;
+        width: calc(100% - 20px);
+
+    }
+}
+
+@media (max-width:900px){
+    .about .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media(max-width:968px){
+    nav.logo{
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+
+    .section .main-container{
+        padding-left:0px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-container .links{
+        display: none;
+    }
+
+    .hamburg,
+    .cancel{
+        opacity: 1;
+        pointer-events: visible;
+    }
+
+    .main-container .content{
+        margin-top: 20px;
+        width: 80%; 
+    }
+
+    .social links i{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .skills .skills-details{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .skills-details .text{
+        width:100%;
+        margin-bottom: 50px;
+    }
+
+    .skills-details .boxes{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .services .boxes .box{
+        margin: 20px 0;
+        width:100%;
+    }
+
+    .contact .contact-text{
+        width:100%;
+    }
+}
+
+@media(max-width:500px){
+    .main-container .content{
+        width:80%;
+    }
+
+    .main-container .card-button{
+        margin-top:15px;
+    }
+
+    .skills-details .boxes .per{
+        font-size: 50px;
+    }
 }
 
 
