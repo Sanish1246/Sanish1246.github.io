@@ -136,14 +136,6 @@ nav{
     display: block; /* Show when toggled */
 }
 
-.hamburg {
-    cursor: pointer;
-}
-
-.cancel {
-    cursor: pointer;
-}
-
 .dropdown .links a:hover{
     background-color: hsl(0, 100%, 55%);
 }
@@ -155,13 +147,14 @@ section{
 
 /*Introductory section*/
 .intro {
-    min-height: 60vh;
+    min-height: 70vh;
 }
 
 section .main-container{
     display:flex;
     padding-left:100px;
     align-items: center;
+    padding-top: 5rem;
 }
 
 .main-container .content{
@@ -477,9 +470,10 @@ section .topic{
 
 .card-list .card-link .card-image{
     width: 80%;
-    height: 800%;
+    height: 80%;
     object-fit: cover;
     border-radius:10px;
+    transform: translate(10%); /* Center the image */
 }
 
 .card-title{
@@ -545,10 +539,6 @@ section .topic{
 @media screen and (max-width:768px) {
     .projects .content{
         margin: 0 10 px 25px;
-    }
-
-    .content .swiper-slide-button{
-        display:none;
     }
 }
 
@@ -638,6 +628,7 @@ footer{
         padding-left:0px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
 
     .nav-container .links{
