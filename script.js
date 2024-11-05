@@ -5,6 +5,30 @@ let wordIndex=0;
 let charIndex=1;
 let deleting=false;
 
+function toggleMenu() {
+    const dropdown = document.getElementById('dropdown-list');
+    const menuIcon = document.getElementById('dropdown-icon');
+    
+    if (dropdown.classList.contains('show')) {
+        dropdown.classList.remove('show');
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+    } else {
+        dropdown.classList.add('show');
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-xmark');
+    }
+}
+
+function cancel() {
+    const dropdown = document.getElementById('dropdown-list');
+    const menuIcon = document.getElementById('dropdown-icon');
+    
+    dropdown.classList.remove('show');
+    menuIcon.classList.remove('fa-xmark');
+    menuIcon.classList.add('fa-bars');
+}
+
 const typing = () => {
     const currentWord = words[wordIndex];
     const currentChar = currentWord.substring(0, charIndex);

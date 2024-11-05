@@ -114,8 +114,8 @@ nav{
     z-index: 100;
     position: absolute;
     top: 0;
-    transform: translateY(-500px); /*invisible*/
     width: 100%;
+    display:none;
     height: auto;
     backdrop-filter: blur(4px) brightness(40%);
     box-shadow: 0 0 20px black;
@@ -130,6 +130,18 @@ nav{
     justify-content: center;
     align-items: center;
     transition: 0.2s linear;
+}
+
+.dropdown.show {
+    display: block; /* Show when toggled */
+}
+
+.hamburg {
+    cursor: pointer;
+}
+
+.cancel {
+    cursor: pointer;
 }
 
 .dropdown .links a:hover{
