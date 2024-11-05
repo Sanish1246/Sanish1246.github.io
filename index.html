@@ -17,23 +17,23 @@
                 Sanish <span> Ramlal</span>
             </div>
             <div class="links">
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#">Home</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#">About</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#">Skills</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#">Services</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#">Projects</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600"><a href="#">Contact</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#nav">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#about">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#skills">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#services">Services</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#projects">Projects</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600"><a href="#contact">Contact</a></div>
             </div>
         </div>
         <i class="fa-solid fa-bars hamburg" id="dropdown-icon" onclick="toggleMenu()"></i>
         <div class="dropdown" id="dropdown-list">
             <div class="links">
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Skills</a>
-                <a href="">Services</a>
-                <a href="">Projects</a>
-                <a href="">Contact</a>
+                <a href="#nav" onclick="cancel()">Home</a>
+                <a href="#about" onclick="cancel()">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#services" onclick="cancel()">Services</a>
+                <a href="#projects" onclick="cancel()">Projects</a>
+                <a href="#contact" onclick="cancel()">Contact</a>
                 <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
             </div>
         </div>
@@ -47,10 +47,10 @@
                 </div>
                 <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">Developer of Tomorrow</p>
                 <div class="socials">
-                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1200">
+                    <a href="https://www.linkedin.com/in/sanish-coomar-ramlal/" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1200">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
-                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300">
+                    <a href="https://github.com/Sanish1246" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300">
                         <i class="fa-brands fa-github"></i>
                     </a>
                 </div>
@@ -71,7 +71,7 @@
                 <div class="right">
                     <div class="topic" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200">Aspiring Developer</div>
                     <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        I am a second year student at Middlesex University of Mauritius with a great passion for programming and developing. As a quick learner, I have developed a strong performance record in both academical and non-academical fields. My endless curiosity and my drive to take on new challenges are what drive me to hone my problem-solving skills and tackle new challenges. 
                     </p>
                 </div>
             </div>
@@ -147,17 +147,17 @@
         </div>
     </section>
 
-    <section class="projects swiper">
+    <section class="projects swiper" id="projects">
         <div class="title" data-aos="fade-up" data-aos-duration="1200"><span>Projects</span></div>
         <div class="content">
             <ul class="card-list swiper-wrapper" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
                 <li class="card-item swiper-slide">
-                    <a href="#" class="card-link">
+                    <a href="https://github.com/Sanish1246/Bookshop-Website" class="card-link">
                         <img src="book.png" alt="Book" class="card-image">
                         <h2 class="card-title">Bookshop website</h2>
-                        <p>Bookshop website made using HTML, CSS <br>
-                            and JavaScript. It features user login and<br>
-                            registration, using HTML local storrage.
+                        <p>Bookshop website made using HTML, CSS and<br>
+                            and JavaScript. It features user login and registration<br>
+                            using HTML local storrage.
                         </p>
                         <button class="card-button">
                             <span class="material-symbols-rounded">arrow_forward</span>
@@ -165,12 +165,10 @@
                     </a>
                 </li>
                 <li class="card-item swiper-slide">
-                    <a href="#" class="card-link">
-                        <img src="knife.png" alt="Book" class="card-image">
+                    <a href="https://www.youtube.com/watch?v=cNf17yKGV18" class="card-link">
+                        <img src="knife.png" alt="Restaurant" class="card-image">
                         <h2 class="card-title">Monster restaurant</h2>
-                        <p>An award-winning website for a restaurant<br>
-                            for zombies and mummies, made with<br>
-                            HTML, CSS,JavaScript and Node.js. 
+                        <p>An award-winning website for a restaurant for zombies and mummies, made with HTML, CSS,JavaScript and Node.js for the 2024 Webcup. 
                         </p>
                         <button class="card-button">
                             <span class="material-symbols-rounded">arrow_forward</span>
@@ -178,12 +176,10 @@
                     </a>
                 </li>
                 <li class="card-item swiper-slide">
-                    <a href="#" class="card-link">
-                        <img src="calculator.png" alt="Book" class="card-image">
+                    <a href="https://github.com/Sanish1246/Calculator" class="card-link">
+                        <img src="calculator.png" alt="Calculator" class="card-image">
                         <h2 class="card-title">Scientific calculator</h2>
-                        <p>A scientific calculator made in Python.<br>
-                            It includes complex operations, sucn as<br>
-                            trignometric and exponential operations.
+                        <p>A scientific calculator made in Python. It includes complex operations, such as trignometric doperations.
                         </p>
                         <button class="card-button">
                             <span class="material-symbols-rounded">arrow_forward</span>
@@ -191,23 +187,20 @@
                     </a>
                 </li>
                 <li class="card-item swiper-slide">
-                    <a href="#" class="card-link">
-                        <img src="atm.png" alt="Book" class="card-image">
+                    <a href="https://github.com/Sanish1246/ATM" class="card-link">
+                        <img src="atm.png" alt="ATM" class="card-image">
                         <h2 class="card-title">ATM</h2>
-                        <p>An ATM simulator, made in Java.<br>
-                            It uses files in order to store user data in a<br>
-                            permanent manner.
-                        </p>
+                        <p>An ATM simulator, made in Java. It makes use text files in order to store user data in a permanent manner. It features OOP heavily.</p>
                         <button class="card-button">
                             <span class="material-symbols-rounded">arrow_forward</span>
                         </button>
                     </a>
                 </li>
                 <li class="card-item swiper-slide">
-                    <a href="#" class="card-link">
-                        <img src="dice.png" alt="Book" class="card-image">
+                    <a href="https://github.com/Sanish1246/Dice-roller" class="card-link">
+                        <img src="dice.png" alt="Dice" class="card-image">
                         <h2 class="card-title">Dice roller</h2>
-                        <p>A dice-rolling simulator made in C.</p>
+                        <p>A dice-rolling simulator made in C. It is run entirely from the terminal and allows the user to keep playing until they decide to stop.</p>
                         <button class="card-button">
                             <span class="material-symbols-rounded">arrow_forward</span>
                         </button>

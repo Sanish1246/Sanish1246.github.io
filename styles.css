@@ -163,7 +163,7 @@ section .main-container{
 }
 
 .content h1{
-    font-size: clamp(1rem, 1rem + 5vw, 4rem);
+    font-size: clamp(1rem, 1rem + 5vw, 5rem);
 }
 
 .content h1 span{
@@ -172,7 +172,7 @@ section .main-container{
 }
 
 .content .typewriter{
-    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
+    font-size: clamp(1rem, 1rem + 5vw, 3rem);
     font-weight: 600;
 }
 
@@ -189,12 +189,12 @@ section .main-container{
     height:30px;
     width:2px;
     background:hsl(0, 100%, 50%);
-    transform: translateY(-45%);
-    animation: blink 0.7s infinite;
 }
 
+
+
 .content p{
-    font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
+    font-size: clamp(0.4rem, 0.2rem + 9vw, 1.3rem);
     margin: 10px 0;
 }
 
@@ -505,6 +505,8 @@ section .topic{
 
 .projects p{
     color: white;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 .swiper {
