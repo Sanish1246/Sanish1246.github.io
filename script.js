@@ -57,7 +57,6 @@ typing();
 const swiper = new Swiper('.projects .content', {
   loop: true,
   spaceBetween: 30,
-  loopFillGroupWithBlank: true, // Assicura che gli spazi siano gestiti correttamente
   pagination: {
       el: '.swiper-pagination',
   },

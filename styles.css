@@ -546,7 +546,7 @@ section .topic{
 
 /*Contact section*/
 .contact{
-    min-height:35vh;
+    min-height:40vh;
 }
 
 .contact .contact-text {
@@ -556,7 +556,7 @@ section .topic{
     justify-content: center; /* Center items vertically */
     margin: 0; /* Remove any excess margin that affects centering */
     height: 100%; 
-    gap:0.5rem;
+    gap:1rem;
 }
 
 .contact .contact-text span {
