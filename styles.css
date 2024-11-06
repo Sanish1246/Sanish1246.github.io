@@ -191,8 +191,6 @@ section .main-container{
     background:hsl(0, 100%, 50%);
 }
 
-
-
 .content p{
     font-size: clamp(0.4rem, 0.2rem + 9vw, 1.3rem);
     margin: 10px 0;
@@ -335,6 +333,7 @@ section .topic{
 .skills-details .text{
     width: 50%;
     padding-left:10px;
+    padding-right:10px;
 }
 
 .skills-details p{
@@ -562,6 +561,7 @@ section .topic{
 .contact .contact-text span {
     color: white;
     text-align: center;
+    padding-left: 10px;
 }
 
 .contact i {
@@ -574,7 +574,7 @@ section .topic{
     background-color: transparent;
     color: hsl(0, 100%, 50%);
     margin: 5px 0; 
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 }
   
 /*Footer*/
