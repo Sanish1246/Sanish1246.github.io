@@ -381,6 +381,7 @@ section .topic{
     margin: 20px, 0;
     width: calc(100%/3 - 20px);
     text-align: center;
+    border:3px solid hsl(0, 100%, 55%);
     border-radius: 12px;
     padding: 30px 10px;
     box-shadow: 0 5px 10px rgba(0,0,0,12);
@@ -392,6 +393,7 @@ section .topic{
 .services .boxes .box:hover{
     background: hsl(0, 100%, 55%);
     color:white;
+    border-color: white;
 }
 
 .services .boxes .box .icon{
