@@ -313,7 +313,7 @@ section .title span::after{
 section .topic{
     color: white;
     font-size: 25px;
-    font-weight: 500;
+    font-weight: 1000;
     margin-bottom: 10px;
 }
 
@@ -338,7 +338,7 @@ section .topic{
 
 .skills-details .text{
     width: 50%;
-    padding-left:10px;
+    padding-left:20px;
     padding-right:10px;
 }
 
@@ -535,7 +535,6 @@ section .topic{
 
 .content .swiper-slide-button{
     color:white;
-    margin-top:-35px;
 }
 
 .content .swiper-slide-button:hover{
