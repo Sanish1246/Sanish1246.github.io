@@ -17,6 +17,12 @@ body{
     overflow-x:hidden;
 }
 
+hr{
+    border:none;
+    height:0.25rem;
+    background-color: white; 
+}
+
 /*Making a custom scorllbar*/
 ::-webkit-scrollbar{
     width:10px;
@@ -412,7 +418,7 @@ section .topic{
     transition: all 0.4s ease;
 }
 
-/*Projects*/
+/*Projects section*/
 .projects{
     margin:0;
     padding:0;
@@ -442,7 +448,7 @@ section .topic{
 }
 
 
-.card-list .card-item{
+.card-list .card-item{ /*Swiper cards*/
     background: black;
     border: 10px solid hsl(0, 100%, 55%);
     border-radius: 8px;
@@ -472,7 +478,7 @@ section .topic{
     height: 80%;
     object-fit: cover;
     border-radius:10px;
-    transform: translate(10%); /* Center the image */
+    transform: translate(13%); /* Center the image */
 }
 
 .card-title{
@@ -586,7 +592,7 @@ footer{
     text-align: center;
 }
 
-/*Adding responsive element*/
+/*Adding responsive elements, depending on the device*/
 @media (max-width:1000px){
     .about .about-details{
         justify-content: center;

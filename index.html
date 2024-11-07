@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link to external font-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--link for fade library-->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
+    <!--link for siper library-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="styles.css">
     <title>Portfolio</title>
 </head>
 
 <body>
+    <!--Navigation bar-->
     <nav>
         <div class="nav-container">
             <div class="topName" data-aos="zoom-in" data-aos-duration="1500">
@@ -39,6 +43,8 @@
             </div>
         </div>
     </nav>
+
+    <!--Intor section-->
     <section class="intro">
         <div class="main-container">
             <div class="content">
@@ -62,6 +68,7 @@
         </div>
     </section>
 
+    <!--About section-->
     <section class="about" id="about">
         <div class="content">
             <div class="title" data-aos="fade-up" data-aos-duration="1500"><span>About me</span></div>
@@ -71,6 +78,7 @@
                 </div>
                 <div class="right">
                     <div class="topic" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200">Aspiring Developer</div>
+                    <hr>
                     <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300">
                         I am a second year student at Middlesex University Mauritius with a great passion for programming and developing. As a quick learner, I have developed a strong performance record in both academical and non-academical fields. My endless curiosity and my drive to take on new challenges are what drives me to hone my problem-solving skills and tackle new challenges. 
                     </p>
@@ -79,6 +87,7 @@
         </div>
     </section>
 
+    <!--Skills section-->
     <section class="skills" id="skills">
         <div class="content">
             <div class="title" data-aos="fade-up" data-aos-duration="1200"><span>My Skills</span></div>
@@ -87,7 +96,8 @@
                     <div class="topic" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="300">
                         A brief overview of my skills
                     </div>
-                    <p data-aos="fade-right">As an aspiring developer, I have grown to learn a diverse set of skills and programming languages, thanks to my endless thirst for learning. I have been able to learn and master these languages through practice by writing several projects that make use of different features of these languages, and also by taking part in various hackatons. This has allowed me to get hands-on practice with developing apps and websites using a vast array of languages. Here, you can find my most used languages.</p>
+                    <hr>
+                    <p data-aos="fade-right">As an aspiring developer, I have grown to learn a diverse set of skills and programming languages, thanks to my endless thirst for learning. I have been able to learn and master these languages through practice by writing several projects that make use of different features, and also by taking part in various hackatons. This has allowed me to get hands-on practice with developing apps and websites using a vast array of languages and skills. Here, you can find my most used languages.</p>
                 </div>
                 <div class="boxes">
                     <div class="box">
@@ -119,6 +129,7 @@
         </div>
     </section>
 
+    <!--Services section-->
     <section class="services" id="services">
         <div class="content">
             <div class="title" data-aos="fade-up" data-aos-duration="1200"><span>My Services</span></div>
@@ -148,13 +159,16 @@
         </div>
     </section>
 
+    <!--Projects section using swiper js-->
     <section class="projects swiper" id="projects">
         <div class="title" data-aos="fade-up" data-aos-duration="1200"><span>Projects</span></div>
+
         <div class="content">
             <ul class="card-list swiper-wrapper" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
                 <li class="card-item swiper-slide">
                     <a href="https://github.com/Sanish1246/Bookshop-Website" class="card-link">
                         <img src="book.png" alt="Book" class="card-image">
+                        <hr>
                         <h2 class="card-title">Bookshop website</h2>
                         <p>Bookshop website made using HTML, CSS and JavaScript. It features user login and registration using HTML local storrage.
                         </p>
@@ -166,6 +180,7 @@
                 <li class="card-item swiper-slide">
                     <a href="https://www.youtube.com/watch?v=cNf17yKGV18" class="card-link">
                         <img src="knife.png" alt="Restaurant" class="card-image">
+                        <hr>
                         <h2 class="card-title">Monster restaurant</h2>
                         <p>An award-winning website for a restaurant for zombies and mummies, made with HTML, CSS, JavaScript and Node.js for the 2024 Webcup. 
                         </p>
@@ -177,6 +192,7 @@
                 <li class="card-item swiper-slide">
                     <a href="https://github.com/Sanish1246/Calculator" class="card-link">
                         <img src="calculator.png" alt="Calculator" class="card-image">
+                        <hr>
                         <h2 class="card-title">Calculator</h2>
                         <p>A scientific calculator made in Python. It includes complex operations, such as trignometric and exponential operations.
                         </p>
@@ -188,6 +204,7 @@
                 <li class="card-item swiper-slide">
                     <a href="https://github.com/Sanish1246/ATM" class="card-link">
                         <img src="atm.png" alt="ATM" class="card-image">
+                        <hr>
                         <h2 class="card-title">ATM</h2>
                         <p>An ATM simulator, made in Java. It makes use text files in order to store user data in a permanent manner. It features OOP heavily.</p>
                         <button class="card-button">
@@ -198,6 +215,7 @@
                 <li class="card-item swiper-slide">
                     <a href="https://github.com/Sanish1246/Dice-roller" class="card-link">
                         <img src="dice.png" alt="Dice" class="card-image">
+                        <hr>
                         <h2 class="card-title">Dice roller</h2>
                         <p>A dice-rolling simulator made in C. It is run entirely from the terminal and allows the user to keep playing until they decide to stop.</p>
                         <button class="card-button">
@@ -212,6 +230,7 @@
         </div>
     </section>
 
+    <!--Contact section-->
     <section class="contact" id="contact">
         <div class="content">
             <div class="title" data-aos="fade-up" data-aos-duration="1200">
