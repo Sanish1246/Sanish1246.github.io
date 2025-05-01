@@ -5,6 +5,7 @@ let wordIndex=0;
 let charIndex=1;
 let deleting=false;
 
+//Function to open the dropdown menu
 function toggleMenu() {
     const dropdown = document.getElementById('dropdown-list');
     const menuIcon = document.getElementById('dropdown-icon');
@@ -20,6 +21,7 @@ function toggleMenu() {
     }
 }
 
+//Function to close the dropdown menu
 function cancel() {
     const dropdown = document.getElementById('dropdown-list');
     const menuIcon = document.getElementById('dropdown-icon');
@@ -29,6 +31,7 @@ function cancel() {
     menuIcon.classList.add('fa-bars');
 }
 
+//Function for the typewriter effecr
 const typing = () => {
     const currentWord = words[wordIndex];
     const currentChar = currentWord.substring(0, charIndex);
@@ -50,10 +53,7 @@ const typing = () => {
 
 typing();
 
-
-
-
-
+//Swiper for the cards
 const swiper = new Swiper('.projects .content', {
   loop: true,
   spaceBetween: 30,
