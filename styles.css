@@ -1,707 +1,703 @@
 /*Importing fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B');
+@import url("https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B");
 
-*{
-    padding:0;
-    margin:0;
-    font-family:"Poppins", sans-serif;
-    box-sizing: border-box;
-    text-decoration: none;
-    scroll-behavior: smooth;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
 }
 
-body{
-    width:100%;
-    height:auto;
-    background-color: black;
-    overflow-x:hidden;
+body {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  overflow-x: hidden;
 }
 
-hr{
-    border:none;
-    height:0.25rem;
-    background-color: white; 
+hr {
+  border: none;
+  height: 0.25rem;
+  background-color: white;
 }
 
 /*Making a custom scorllbar*/
-::-webkit-scrollbar{
-    width:10px;
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-::-webkit-scrollbar-track{
-    background: white;
+::-webkit-scrollbar-track {
+  background: white;
 }
 
-::-webkit-scrollbar-thumb{
-    background: hsl(0, 100%, 55%);
-    border-radius: 12px;
-    transition: all 0.3s ease;
+::-webkit-scrollbar-thumb {
+  background: hsl(0, 100%, 55%);
+  border-radius: 12px;
+  transition: all 0.3s ease;
 }
 
-::-webkit-scrollbar-thumb:hover{
-    background: hsl(0, 100%, 55%);
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(0, 100%, 55%);
 }
 /*Navigation bar*/
-nav{
-    width:100%;
-    height:10vh;
+nav {
+  width: 100%;
+  height: 10vh;
 }
 
-.nav-container{
-    width:100%;
-    height:100%;
-    display:flex;
-    justify-content:space-around;
-    align-items:center;
+.nav-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.topName{
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
+.topName {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
-.topName span{
-    color:hsl(0, 100%, 50%);
-    text-shadow: 0 0 10px hsl(0, 100%, 60%)
+.topName span {
+  color: hsl(0, 100%, 50%);
+  text-shadow: 0 0 10px hsl(0, 100%, 60%);
 }
 
 .hamburg,
-.cancel{
-    cursor: pointer;
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    color: white;
-    opacity:0;
-    pointer-events:none;
-    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem); /*Dynamic font size*/
-    /*0.5rem + 5vw adds 5 viewport widths and 0.5 rem*/
-    /*2.5 rem is min size and 3 rem is max size*/
-} 
-
-.nav-container .links{
-    display: flex;
+.cancel {
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: white;
+  opacity: 0;
+  pointer-events: none;
+  font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem); /*Dynamic font size*/
+  /*0.5rem + 5vw adds 5 viewport widths and 0.5 rem*/
+  /*2.5 rem is min size and 3 rem is max size*/
 }
 
-.nav-container .links a{
-    position:relative;
-    font-size: 1.2 rem;
-    color: white;
-    margin: 0 20px;
-    text-decoration: none;
-    font-weight: 550;
-    transition: 0.3s linear;
+.nav-container .links {
+  display: flex;
+}
+
+.nav-container .links a {
+  position: relative;
+  font-size: 1.2 rem;
+  color: white;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: 550;
+  transition: 0.3s linear;
 }
 
 /*Inserting content before the links*/
-.nav-container .links a:before{
-    position: absolute;
-    content: "";
-    bottom: -3px;
-    left:0;
-    width:0%;
-    height:3px;
-    background-color: hsl(0, 100%, 50%);
-    transition: 0.2s linear;
+.nav-container .links a:before {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: hsl(0, 100%, 50%);
+  transition: 0.2s linear;
 }
 
-.nav-container .links a:hover::before{
-    width:100%;
+.nav-container .links a:hover::before {
+  width: 100%;
 }
 
-.nav-container .links a:hover{
-    color:hsl(0, 100%, 50%);
-    border-bottom: 2px solid hsl(0, 100%, 50%);
+.nav-container .links a:hover {
+  color: hsl(0, 100%, 50%);
+  border-bottom: 2px solid hsl(0, 100%, 50%);
 }
 
 /*Dropdown menu*/
-.dropdown{
-    z-index: 100;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display:none;
-    height: auto;
-    backdrop-filter: blur(4px) brightness(40%);
-    box-shadow: 0 0 20px black;
-    transition: 0.2s linear;
+.dropdown {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: none;
+  height: auto;
+  backdrop-filter: blur(4px) brightness(40%);
+  box-shadow: 0 0 20px black;
+  transition: 0.2s linear;
 }
 
-.dropdown .links a{
-    display: flex;
-    color: white;
-    text-decoration: none;
-    padding: 15px 0;
-    justify-content: center;
-    align-items: center;
-    transition: 0.2s linear;
+.dropdown .links a {
+  display: flex;
+  color: white;
+  text-decoration: none;
+  padding: 15px 0;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s linear;
 }
 
 .dropdown.show {
-    display: block; /* Show when toggled */
+  display: block; /* Show when toggled */
 }
 
-.dropdown .links a:hover{
-    background-color: hsl(0, 100%, 55%);
+.dropdown .links a:hover {
+  background-color: hsl(0, 100%, 55%);
 }
 
-section{
-    width: 100%;
-    min-height: 90vh;
+section {
+  width: 100%;
+  min-height: 90vh;
 }
 
 /*Introductory section*/
 .intro {
-    min-height: 70vh;
+  min-height: 70vh;
 }
 
-section .main-container{
-    display:flex;
-    padding-left:100px;
-    align-items: center;
-    padding-top: 5rem;
+section .main-container {
+  display: flex;
+  padding-left: 100px;
+  align-items: center;
+  padding-top: 5rem;
 }
 
-.main-container .content{
-    color:white;
-    width:50%;
+.main-container .content {
+  color: white;
+  width: 50%;
 }
 
-.content h1{
-    font-size: clamp(1rem, 1rem + 5vw, 5rem);
+.content h1 {
+  font-size: clamp(1rem, 1rem + 5vw, 5rem);
 }
 
-.content h1 span{
-    color:hsl(0, 100%, 50%);
-    text-shadow: 0 0 10px hsl(0, 100%, 50%);
+.content h1 span {
+  color: hsl(0, 100%, 50%);
+  text-shadow: 0 0 10px hsl(0, 100%, 50%);
 }
 
-.content .typewriter{
-    font-size: clamp(1rem, 1rem + 5vw, 3rem);
-    font-weight: 600;
+.content .typewriter {
+  font-size: clamp(1rem, 1rem + 5vw, 3rem);
+  font-weight: 600;
 }
 
-.content .typewriter-text{
-    position: relative;
-    color: hsl(0, 100%, 55%);
-    text-shadow:0 0 10px hsl(0, 100%, 50%)
+.content .typewriter-text {
+  position: relative;
+  color: hsl(0, 100%, 55%);
+  text-shadow: 0 0 10px hsl(0, 100%, 50%);
 }
 
-.content .typewriter-text::before{
-    content:"";
-    right: -8px;
-    top:50%;
-    height:30px;
-    width:2px;
-    background:hsl(0, 100%, 50%);
+.content .typewriter-text::before {
+  content: "";
+  right: -8px;
+  top: 50%;
+  height: 30px;
+  width: 2px;
+  background: hsl(0, 100%, 50%);
 }
 
-.content p{
-    font-size: clamp(0.4rem, 0.2rem + 9vw, 1.3rem);
-    margin: 10px 0;
+.content p {
+  font-size: clamp(0.4rem, 0.2rem + 9vw, 1.3rem);
+  margin: 10px 0;
 }
 
-.socials i{
-    padding-top:0.5rem;
-    display: inline-flex; /*makes the content flexible while keeping the container on the same line*/
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    background-color: transparent;
-    border: 0.2rem solid hsl(0, 100%, 50%);
-    border-radius: 50%;
-    color:hsl(0, 100%, 50%);
-    margin: 5px 15px;
-    font-size:1.5rem;
-    transition: 0.2s linear;
+.socials i {
+  padding-top: 0.5rem;
+  display: inline-flex; /*makes the content flexible while keeping the container on the same line*/
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+  border: 0.2rem solid hsl(0, 100%, 50%);
+  border-radius: 50%;
+  color: hsl(0, 100%, 50%);
+  margin: 5px 15px;
+  font-size: 1.5rem;
+  transition: 0.2s linear;
 }
 
-.socials i:hover{
-    scale:1.3;
-    color:black;
-    background-color: hsl(0, 100%, 50%);
-    filter: drop-shadow(0 0 10px hsl(0, 100%,30%));
+.socials i:hover {
+  scale: 1.3;
+  color: black;
+  background-color: hsl(0, 100%, 50%);
+  filter: drop-shadow(0 0 10px hsl(0, 100%, 30%));
 }
 
-.main-container .content button{
-    width: 50%;
-    height: 6vh;
-    margin: 30px;
-    background-color:hsl(0, 100%, 55%);
-    color:white;
-    border: none;
-    outline:none;
-    font-size:120%;
-    font-weight:700;
-    border-radius:20px;
-    transition: 0.2s linear;
+.main-container .content button {
+  width: 50%;
+  height: 6vh;
+  margin: 30px;
+  background-color: hsl(0, 100%, 55%);
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 120%;
+  font-weight: 700;
+  border-radius: 20px;
+  transition: 0.2s linear;
 }
 
-.main-container .content button:hover{
-    scale:1.1;
-    color:hsl(0, 100%, 50%);
-    border: 2px solid hsl(0, 100%, 50%);
-    background-color: transparent;
-    font-weight:700;
-    box-shadow: 0 0 40px hsl(0, 100%, 50%);
-    cursor:pointer;
+.main-container .content button:hover {
+  scale: 1.1;
+  color: hsl(0, 100%, 50%);
+  border: 2px solid hsl(0, 100%, 50%);
+  background-color: transparent;
+  font-weight: 700;
+  box-shadow: 0 0 40px hsl(0, 100%, 50%);
+  cursor: pointer;
 }
 
 /*About section*/
-.section .content{
-    width: 80%;
-    margin: 0px auto;
-    font-family: 'Poppins', sans-serif;
+.section .content {
+  width: 80%;
+  margin: 0px auto;
+  font-family: "Poppins", sans-serif;
 }
 
-.about .about-details{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.about .about-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-section .title{
-    display: flex;
-    justify-content: center;
-    margin-bottom:40px;
+section .title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
 }
 
-section .title span{
-    color: white;
-    font-size:30px;
-    font-weight: 600;
-    position:relative;
-    padding-bottom: 8px;
+section .title span {
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 8px;
 }
 
 section .title span::before,
-section .title span::after{
-    content:"";
-    position: absolute;
-    height: 3px;
-    width: 150px;
-    background: hsl(0, 100%, 55%);
-    left: 0;
-    bottom: 0;
+section .title span::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 150px;
+  background: hsl(0, 100%, 55%);
+  left: 0;
+  bottom: 0;
 }
 
-section .title span::after{
-    bottom: -7px;
-    width: 75px;
-    left: 50%;
-    transform: translateX(-50%);  
+section .title span::after {
+  bottom: -7px;
+  width: 75px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.about .about-details .left{
-    width:45%
+.about .about-details .left {
+  width: 45%;
 }
 
-.about .left img{
-    height: 400px;
-    width: 400px;
-    object-fit: cover;
-    border-radius: 12px;
+.about .left img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
-.about-details .right{
-    padding-right: 5rem;
-    padding-left: 0px;
-    width: 55%;
+.about-details .right {
+  padding-right: 5rem;
+  padding-left: 0px;
+  width: 55%;
 }
 
-section .topic{
-    color: white;
-    font-size: 25px;
-    font-weight: 1000;
-    margin-bottom: 10px;
+section .topic {
+  color: white;
+  font-size: 25px;
+  font-weight: 1000;
+  margin-bottom: 10px;
 }
 
-.about-details .right p{
-    text-align: justify;
-    color: white;
+.about-details .right p {
+  text-align: justify;
+  color: white;
 }
 
-.skills{
-    background:black;
+.skills {
+  background: black;
 }
 
-.skills .content{
-    padding: 40px 0;
+.skills .content {
+  padding: 40px 0;
 }
 
-.skills .skills-details{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.skills .skills-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.skills-details .text{
-    width: 50%;
-    padding-left:20px;
-    padding-right:10px;
+.skills-details .text {
+  width: 50%;
+  padding-left: 20px;
+  padding-right: 10px;
 }
 
-.skills-details p{
-    color: white;
-    text-align: justify;
+.skills-details p {
+  color: white;
+  text-align: justify;
 }
 
-.skills-details .boxes{
-    width:40%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-right: 20px;
+.skills-details .boxes {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-right: 20px;
 }
 
-.skills-details .box{
-    width: calc(100% / 2 - 20px);
-    margin: 40px 0;
+.skills-details .box {
+  width: calc(100% / 2 - 20px);
+  margin: 40px 0;
 }
 
-.skills-details .boxes .topic{
-    font-size: 20px;
-    color: hsl(0, 100%, 55%);
+.skills-details .boxes .topic {
+  font-size: 20px;
+  color: hsl(0, 100%, 55%);
 }
 
-.skills-details .boxes .per{
-    font-size: 60px;
-    color: hsl(0, 100%, 55%);
+.skills-details .boxes .per {
+  font-size: 60px;
+  color: hsl(0, 100%, 55%);
 }
 
 /*Services section*/
-.services .boxes{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.services .boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.services .boxes .box{
-    margin: 20px, 0;
-    width: calc(100%/3 - 20px);
-    text-align: center;
-    border:3px solid hsl(0, 100%, 55%);
-    border-radius: 12px;
-    padding: 30px 10px;
-    box-shadow: 0 5px 10px rgba(0,0,0,12);
-    cursor:default;
-    color: white;
-    transition: all 0.4s ease;
+.services .boxes .box {
+  margin: 20px, 0;
+  width: calc(100% / 3 - 20px);
+  text-align: center;
+  border: 3px solid hsl(0, 100%, 55%);
+  border-radius: 12px;
+  padding: 30px 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 12);
+  cursor: default;
+  color: white;
+  transition: all 0.4s ease;
 }
 
-.services .boxes .box:hover{
-    background: hsl(0, 100%, 55%);
-    color:white;
-    border-color: white;
+.services .boxes .box:hover {
+  background: hsl(0, 100%, 55%);
+  color: white;
+  border-color: white;
 }
 
-.services .boxes .box .icon{
-    height: 50px;
-    width: 50px;
-    background:hsl(0, 100%, 55%);
-    border-radius: 50%;
-    text-align: center;
-    line-height: 50px;
-    font-size: 18px;
-    color: white;
-    margin: 0 auto 10px auto;
-    transition: all 0.4s ease;
+.services .boxes .box .icon {
+  height: 50px;
+  width: 50px;
+  background: hsl(0, 100%, 55%);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  color: white;
+  margin: 0 auto 10px auto;
+  transition: all 0.4s ease;
 }
 
-.boxes .box:hover .icon{
-    background-color: white;
-    color: hsl(0, 100%, 55%);
+.boxes .box:hover .icon {
+  background-color: white;
+  color: hsl(0, 100%, 55%);
 }
 
 .services .boxes .box:hover.topic,
-.services .boxes .box:hover p{
-    color: white;
-    transition: all 0.4s ease;
+.services .boxes .box:hover p {
+  color: white;
+  transition: all 0.4s ease;
 }
 
 /*Projects section*/
-.projects{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+.projects {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.projects .content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: black;
-    max-width: 1100px;
-    margin: 0 60px 35px;
-    padding: 20px 10px;
-    overflow:hidden;
-}
-
-.projects .content .swiper-pagination-bullet{
-    height: 13px;
-    width: 13px;
-    opacity:0.5;
-    background: white;
+.projects .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: black;
+  max-width: 1100px;
+  margin: 0 60px 35px;
+  padding: 20px 10px;
+  overflow: hidden;
 }
 
-.projects .content .swiper-pagination-bullet-active{
-    opacity:1;
+.projects .content .swiper-pagination-bullet {
+  height: 13px;
+  width: 13px;
+  opacity: 0.5;
+  background: white;
 }
 
-
-.card-list .card-item{ /*Swiper cards*/
-    background: black;
-    border: 10px solid hsl(0, 100%, 55%);
-    border-radius: 8px;
-    align-content:center;
-    box-shadow: 0 10px 10px hsl(0, 100%, 55%);
-    transition: 0.4 ease;
+.projects .content .swiper-pagination-bullet-active {
+  opacity: 1;
 }
 
-.card-list .card-item:hover{
-    border-color:white;
-    background-color:hsl(0, 100%, 45%);
+.card-list .card-item {
+  /*Swiper cards*/
+  background: black;
+  border: 10px solid hsl(0, 100%, 55%);
+  border-radius: 8px;
+  align-content: center;
+  box-shadow: 0 10px 10px hsl(0, 100%, 55%);
+  transition: 0.4 ease;
 }
 
-
-.card-list .card.item .card.link{
-    user-select: none;
-    display: block;
-    padding:18px;
-    border-radius:12px;
-    text-decoration: none;
-    color:white;
-    user-select:none;
+.card-list .card-item:hover {
+  border-color: white;
+  background-color: hsl(0, 100%, 45%);
 }
 
-.card-list .card-link .card-image{
-    width: 80%;
-    height: 80%;
-    object-fit: cover;
-    border-radius:10px;
-    transform: translate(13%); /* Center the image */
+.card-list .card.item .card.link {
+  user-select: none;
+  display: block;
+  padding: 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  user-select: none;
 }
 
-.card-title{
-    font-size:2rem;
-    color:white;
-    font-weight:600;
+.card-list .card-link .card-image {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 10px;
+  transform: translate(13%); /* Center the image */
 }
 
-.card-button{
-    padding-top: 0px;
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;
-    background-color: hsl(0, 100%, 55%);
-    color:white;
-    margin: 30px 0 5px;
-    border: 2px solid white;
-    cursor: pointer;
-    transform: rotate(-45deg);
+.card-title {
+  font-size: 2rem;
+  color: white;
+  font-weight: 600;
 }
 
-.card-button:hover{
-    scale:1.3;
-    color:black;
-    background-color: hsl(0, 100%, 50%);
-    filter: drop-shadow(0 0 10px hsl(0, 100%,30%));
-    border: 2px solid hsl(0, 30%, 51%);;
+.card-button {
+  padding-top: 0px;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: hsl(0, 100%, 55%);
+  color: white;
+  margin: 30px 0 5px;
+  border: 2px solid white;
+  cursor: pointer;
+  transform: rotate(-45deg);
 }
 
-.projects p{
-    color: white;
-    padding-left: 4px;
-    padding-right: 4px;
+.card-button:hover {
+  scale: 1.3;
+  color: black;
+  background-color: hsl(0, 100%, 50%);
+  filter: drop-shadow(0 0 10px hsl(0, 100%, 30%));
+  border: 2px solid hsl(0, 30%, 51%);
+}
+
+.projects p {
+  color: white;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 .swiper {
-    width: 100%; 
-    max-width: 1200px; 
-    margin: 0 auto; /* Centering the swiper in its container */
-    box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Centering the swiper in its container */
+  box-sizing: border-box;
 }
 
 .swiper-slide {
-    width: auto; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .swiper-wrapper {
-    display: flex;
-    transition-timing-function: ease;
+  display: flex;
+  transition-timing-function: ease;
 }
 
-.content .swiper-slide-button{
-    color:white;
+.content .swiper-slide-button {
+  color: white;
 }
 
-.content .swiper-slide-button:hover{
-    text-shadow: 0 0 10px whitesmoke;
+.content .swiper-slide-button:hover {
+  text-shadow: 0 0 10px whitesmoke;
 }
 
 /* For phones display*/
-@media screen and (max-width:768px) {
-    .projects .content{
-        margin: 0 10 px 25px;
-    }
+@media screen and (max-width: 768px) {
+  .projects .content {
+    margin: 0 10 px 25px;
+  }
 }
 
 /*Contact section*/
-.contact{
-    min-height:40vh;
+.contact {
+  min-height: 40vh;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .contact .contact-text {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center;    /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-    margin: 0; /* Remove any excess margin that affects centering */
-    height: 100%; 
-    gap:1rem;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  margin: 0; /* Remove any excess margin that affects centering */
+  height: 100%;
+  gap: 1rem;
 }
 
 .contact .contact-text span {
-    color: white;
-    text-align: center;
-    padding-left: 10px;
+  color: white;
+  text-align: center;
+  padding-left: 10px;
 }
 
 .contact i {
-    padding-top: 0.5rem;
-    display: flex; /* Flexible display */
-    align-items: center; /* Ensure icon and text are aligned vertically */
-    justify-content: center; /* Center content within the icon area */
-    width: auto; 
-    height: auto;
-    background-color: transparent;
-    color: hsl(0, 100%, 50%);
-    margin: 5px 0; 
-    font-size: 1.75rem;
+  padding-top: 0.5rem;
+  display: flex; /* Flexible display */
+  align-items: center; /* Ensure icon and text are aligned vertically */
+  justify-content: center; /* Center content within the icon area */
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  color: hsl(0, 100%, 50%);
+  margin: 5px 0;
+  font-size: 1.75rem;
 }
-  
+
 /*Footer*/
-footer{
-    height:3.5rem;
-    background-color: hsl(0, 100%, 50%);
-    width: 100%;
-    color:white;
-    text-align: center;
+footer {
+  height: 3.5rem;
+  background-color: hsl(0, 100%, 50%);
+  width: 100%;
+  color: white;
+  text-align: center;
 }
 
 /*Adding responsive elements, depending on the device*/
-@media (max-width:1000px){
-    .about .about-details{
-        justify-content: center;
-        flex-direction: column;
-    }
+@media (max-width: 1000px) {
+  .about .about-details {
+    justify-content: center;
+    flex-direction: column;
+  }
 
-    .about .about-details .left{
-        display: flex;
-        justify-content: center;
-        width:100%;
-    }
+  .about .about-details .left {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 
-    .about .about-details .right{
-        width:90%;
-        margin: 40px 0;
-    }
+  .about .about-details .right {
+    width: 90%;
+    margin: 40px 0;
+  }
 
-    .services .boxes .box{
-        margin: 20px 0;
-        width: calc(100% - 20px);
-
-    }
+  .services .boxes .box {
+    margin: 20px 0;
+    width: calc(100% - 20px);
+  }
 }
 
-@media (max-width:900px){
-    .about .left img{
-        height: 350px;
-        width: 350px;
-    }
+@media (max-width: 900px) {
+  .about .left img {
+    height: 350px;
+    width: 350px;
+  }
 }
 
-@media(max-width:968px){
-    nav.logo{
-        position: absolute;
-        top: 16px;
-        left: 15px;
-        font-size: 1.5rem;
-    }
+@media (max-width: 968px) {
+  nav.logo {
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    font-size: 1.5rem;
+  }
 
-    .section .main-container{
-        padding-left:0px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+  .section .main-container {
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-    .nav-container .links{
-        display: none;
-    }
+  .nav-container .links {
+    display: none;
+  }
 
-    .hamburg,
-    .cancel{
-        opacity: 1;
-        pointer-events: visible;
-    }
+  .hamburg,
+  .cancel {
+    opacity: 1;
+    pointer-events: visible;
+  }
 
-    .main-container .content{
-        margin-top: 20px;
-        width: 80%; 
-    }
+  .main-container .content {
+    margin-top: 20px;
+    width: 80%;
+  }
 
-    .social links i{
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1.5rem;
-    }
+  .social links i {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
 
-    .skills .skills-details{
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
+  .skills .skills-details {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 
-    .skills-details .text{
-        width:100%;
-        margin-bottom: 50px;
-    }
+  .skills-details .text {
+    width: 100%;
+    margin-bottom: 50px;
+  }
 
-    .skills-details .boxes{
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
+  .skills-details .boxes {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 
-    .services .boxes .box{
-        margin: 20px 0;
-        width:100%;
-    }
+  .services .boxes .box {
+    margin: 20px 0;
+    width: 100%;
+  }
 
-    .contact .contact-text{
-        width:100%;
-    }
+  .contact .contact-text {
+    width: 100%;
+  }
 }
 
-@media(max-width:500px){
-    .main-container .content{
-        width:80%;
-    }
+@media (max-width: 500px) {
+  .main-container .content {
+    width: 80%;
+  }
 
-    .main-container .card-button{
-        margin-top:15px;
-    }
+  .main-container .card-button {
+    margin-top: 15px;
+  }
 
-    .skills-details .boxes .per{
-        font-size: 50px;
-    }
+  .skills-details .boxes .per {
+    font-size: 50px;
+  }
 }
-
-
-
-

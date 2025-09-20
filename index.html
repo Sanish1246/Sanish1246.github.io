@@ -1,250 +1,523 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--link to external font-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <!--link for fade library-->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward"
+    />
     <!--link for siper library-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="styles.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <title>Portfolio</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!--Navigation bar-->
     <nav>
-        <div class="nav-container">
-            <div class="topName" data-aos="zoom-in" data-aos-duration="1500">
-                Sanish <span> Ramlal</span>
-            </div>
-            <div class="links">
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#">Home</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#about">About</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#skills">Skills</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#services">Services</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#projects">Projects</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600"><a href="#contact">Contact</a></div>
-            </div>
+      <div class="nav-container">
+        <div class="topName" data-aos="zoom-in" data-aos-duration="1500">
+          Sanish <span> Ramlal</span>
         </div>
-        <i class="fa-solid fa-bars hamburg" id="dropdown-icon" onclick="toggleMenu()"></i>
-        <div class="dropdown" id="dropdown-list">
-            <div class="links">
-                <a href="#" onclick="cancel()">Home</a>
-                <a href="#about" onclick="cancel()">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#services" onclick="cancel()">Services</a>
-                <a href="#projects" onclick="cancel()">Projects</a>
-                <a href="#contact" onclick="cancel()">Contact</a>
-                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
-            </div>
+        <div class="links">
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="100"
+          >
+            <a href="#">Home</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="200"
+          >
+            <a href="#about">About</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="300"
+          >
+            <a href="#skills">Skills</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="400"
+          >
+            <a href="#services">Services</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="500"
+          >
+            <a href="#projects">Projects</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="600"
+          >
+            <a href="#contact">Contact</a>
+          </div>
         </div>
+      </div>
+      <i
+        class="fa-solid fa-bars hamburg"
+        id="dropdown-icon"
+        onclick="toggleMenu()"
+      ></i>
+      <div class="dropdown" id="dropdown-list">
+        <div class="links">
+          <a href="#" onclick="cancel()">Home</a>
+          <a href="#about" onclick="cancel()">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#services" onclick="cancel()">Services</a>
+          <a href="#projects" onclick="cancel()">Projects</a>
+          <a href="#contact" onclick="cancel()">Contact</a>
+          <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+        </div>
+      </div>
     </nav>
 
     <!--Intor section-->
     <section class="intro">
-        <div class="main-container">
-            <div class="content">
-                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hi, I'm <span> Sanish!</span></h1>
-                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="800">I'm a 
-                    <span class="typewriter-text" id="typewriter-text"></span>|
-                </div>
-                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">Developer of Tomorrow</p>
-                <div class="socials">
-                    <a href="https://www.linkedin.com/in/sanish-coomar-ramlal/" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1200">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/Sanish1246" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                </div>
-                <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1400">
-                    <a href="https://github.com/Sanish1246/Sanish1246.github.io"><button>Source code</button></a>
-                </div>
-            </div>
+      <div class="main-container">
+        <div class="content">
+          <h1
+            data-aos="fade-left"
+            data-aos-duration="1500"
+            data-aos-delay="700"
+          >
+            Hi, I'm <span> Sanish!</span>
+          </h1>
+          <div
+            class="typewriter"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+            data-aos-delay="800"
+          >
+            I'm a <span class="typewriter-text" id="typewriter-text"></span>|
+          </div>
+          <p
+            data-aos="flip-down"
+            data-aos-duration="1500"
+            data-aos-delay="1100"
+          >
+            Developer of Tomorrow
+          </p>
+          <div class="socials">
+            <a
+              href="https://www.linkedin.com/in/sanish-coomar-ramlal/"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="1200"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/Sanish1246"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="1300"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+          <div
+            class="btn"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+            data-aos-delay="1400"
+          >
+            <a href="https://github.com/Sanish1246/Sanish1246.github.io"
+              ><button>Source code</button></a
+            >
+          </div>
         </div>
+      </div>
     </section>
 
     <!--About section-->
     <section class="about" id="about">
-        <div class="content">
-            <div class="title" data-aos="fade-up" data-aos-duration="1500"><span>About me</span></div>
-            <div class="about-details">
-                <div class="left" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="200">
-                    <img src="./images/ai.jpg" alt="">
-                </div>
-                <div class="right">
-                    <div class="topic" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200">Aspiring Developer</div>
-                    <hr>
-                    <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300">
-                        I am a third year student at Middlesex University Mauritius with a great passion for programming and developing. As a quick learner, I have developed a strong performance record in both academical and non-academical fields. My endless curiosity and my drive to take on new challenges are what drives me to hone my problem-solving skills and tackle new challenges. 
-                    </p>
-                </div>
-            </div>
+      <div class="content">
+        <div class="title" data-aos="fade-up" data-aos-duration="1500">
+          <span>About me</span>
         </div>
+        <div class="about-details">
+          <div
+            class="left"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+            data-aos-delay="200"
+          >
+            <img src="./images/ai.jpg" alt="" />
+          </div>
+          <div class="right">
+            <div
+              class="topic"
+              data-aos="fade-left"
+              data-aos-duration="1500"
+              data-aos-delay="200"
+            >
+              Aspiring Developer
+            </div>
+            <hr />
+            <p
+              data-aos="flip-down"
+              data-aos-duration="1500"
+              data-aos-delay="300"
+            >
+              I am a third year student at Middlesex University Mauritius with a
+              great passion for programming and developing. As a quick learner,
+              I have developed a strong performance record in both academical
+              and non-academical fields. My endless curiosity and my drive to
+              take on new challenges are what drives me to hone my
+              problem-solving skills and tackle new challenges.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!--Skills section-->
     <section class="skills" id="skills">
-        <div class="content">
-            <div class="title" data-aos="fade-up" data-aos-duration="1200"><span>My Skills</span></div>
-            <div class="skills-details">
-                <div class="text">
-                    <div class="topic" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="300">
-                        A brief overview of my skills
-                    </div>
-                    <hr>
-                    <p data-aos="fade-right">As an aspiring developer, I have grown to learn a diverse set of skills and programming languages, thanks to my endless thirst for learning. I have been able to learn and master these languages through practice by writing several projects that make use of different features, and also by taking part in various hackatons. This has allowed me to get hands-on practice with developing apps and websites using a vast array of languages and skills. Here, you can find my most used languages.</p>
-                </div>
-                <div class="boxes">
-                    <div class="box">
-                        <div class="topic" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="150">JavaScript</div>
-                        <div class="per" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="300">90%</div>
-                    </div>
-                    <div class="box">
-                        <div class="topic" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="450">Node.js</div>
-                        <div class="per" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="600">70%</div>
-                    </div>
-                    <div class="box">
-                        <div class="topic" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="450">C#</div>
-                        <div class="per" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="600">70%</div>
-                    </div>
-                    <div class="box">
-                        <div class="topic" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="450">C</div>
-                        <div class="per" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="600">75%</div>
-                    </div>
-                    <div class="box">
-                        <div class="topic" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="150">Java</div>
-                        <div class="per" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="600">80%</div>
-                    </div>
-                    <div class="box">
-                        <div class="topic" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="450">Python</div>
-                        <div class="per" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="600">70%</div>
-                    </div>
-                </div>
-            </div>
+      <div class="content">
+        <div class="title" data-aos="fade-up" data-aos-duration="1200">
+          <span>My Skills</span>
         </div>
+        <div class="skills-details">
+          <div class="text">
+            <div
+              class="topic"
+              data-aos="zoom-in"
+              data-aos-duration="1200"
+              data-aos-delay="300"
+            >
+              A brief overview of my skills
+            </div>
+            <hr />
+            <p data-aos="fade-right">
+              As an aspiring developer, I have grown to learn a diverse set of
+              skills and programming languages, thanks to my endless thirst for
+              learning. I have been able to learn and master these languages
+              through practice by writing several projects that make use of
+              different features. I have also been able to write multiple
+              award-winning websites in several hackathons, demonstrating my
+              creativity and innovation. This has allowed me to get hands-on
+              practice with developing apps and websites using a vast array of
+              languages and skills. Here, you can find my most used languages.
+            </p>
+          </div>
+          <div class="boxes">
+            <div class="box">
+              <div
+                class="topic"
+                data-aos="fade-left"
+                data-aos-duration="1200"
+                data-aos-delay="150"
+              >
+                React.js
+              </div>
+              <div
+                class="per"
+                data-aos="zoom-in"
+                data-aos-duration="1200"
+                data-aos-delay="300"
+              >
+                70%
+              </div>
+            </div>
+            <div class="box">
+              <div
+                class="topic"
+                data-aos="fade-right"
+                data-aos-duration="1200"
+                data-aos-delay="450"
+              >
+                Node.js
+              </div>
+              <div
+                class="per"
+                data-aos="zoom-in"
+                data-aos-duration="1200"
+                data-aos-delay="600"
+              >
+                80%
+              </div>
+            </div>
+            <div class="box">
+              <div
+                class="topic"
+                data-aos="fade-left"
+                data-aos-duration="1200"
+                data-aos-delay="450"
+              >
+                C#
+              </div>
+              <div
+                class="per"
+                data-aos="zoom-in"
+                data-aos-duration="1200"
+                data-aos-delay="600"
+              >
+                70%
+              </div>
+            </div>
+            <div class="box">
+              <div
+                class="topic"
+                data-aos="fade-right"
+                data-aos-duration="1200"
+                data-aos-delay="450"
+              >
+                TailwindCSS
+              </div>
+              <div
+                class="per"
+                data-aos="zoom-in"
+                data-aos-duration="1200"
+                data-aos-delay="600"
+              >
+                80%
+              </div>
+            </div>
+            <div class="box">
+              <div
+                class="topic"
+                data-aos="fade-left"
+                data-aos-duration="1200"
+                data-aos-delay="150"
+              >
+                Java
+              </div>
+              <div
+                class="per"
+                data-aos="zoom-in"
+                data-aos-duration="1200"
+                data-aos-delay="600"
+              >
+                80%
+              </div>
+            </div>
+            <div class="box">
+              <div
+                class="topic"
+                data-aos="fade-right"
+                data-aos-duration="1200"
+                data-aos-delay="450"
+              >
+                Python
+              </div>
+              <div
+                class="per"
+                data-aos="zoom-in"
+                data-aos-duration="1200"
+                data-aos-delay="600"
+              >
+                70%
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!--Services section-->
     <section class="services" id="services">
-        <div class="content">
-            <div class="title" data-aos="fade-up" data-aos-duration="1200"><span>My Services</span></div>
-            <div class="boxes">
-                <div class="box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
-                    <div class="icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="topic">Development</div>
-                    <p>I can develop various different types of apps and websites, from the simpler ones to the more complex ones, using different languages to meet all kinds of needs.</p>
-                </div>
-                <div class="box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
-                    <div class="icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <div class="topic">Problem Solving</div>
-                    <p>I can contribute by providing my problem-solving skills, which were honed by dealing with a plethora of issues head-on and developing solutions for each of them.</p>
-                </div>
-                <div class="box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
-                    <div class="icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <div class="topic">Innovation</div>
-                    <p>I can develop innovative solutions in order to tackle issues, or innovate upon existing ideas by completely revolutionizing them and buliding upon them.</p>
-                </div>
-            </div>
+      <div class="content">
+        <div class="title" data-aos="fade-up" data-aos-duration="1200">
+          <span>My Services</span>
         </div>
+        <div class="boxes">
+          <div
+            class="box"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+            data-aos-delay="200"
+          >
+            <div class="icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="topic">Development</div>
+            <p>
+              I can develop various different types of apps and websites, from
+              the simpler ones to the more complex ones, using different
+              languages to meet all kinds of needs.
+            </p>
+          </div>
+          <div
+            class="box"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+            data-aos-delay="400"
+          >
+            <div class="icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="topic">Problem Solving</div>
+            <p>
+              I can contribute by providing my problem-solving skills, which
+              were honed by dealing with a plethora of issues head-on and
+              developing solutions for each of them.
+            </p>
+          </div>
+          <div
+            class="box"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+            data-aos-delay="600"
+          >
+            <div class="icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="topic">Innovation</div>
+            <p>
+              I can develop innovative solutions in order to tackle issues, or
+              innovate upon existing ideas by completely revolutionizing them
+              and buliding upon them.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!--Projects section using swiper js-->
     <section class="projects swiper" id="projects">
-        <div class="title" data-aos="fade-up" data-aos-duration="1200"><span>Recent Projects</span></div>
-        <div class="content">
-            <ul class="card-list swiper-wrapper" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
-                <li class="card-item swiper-slide">
-                    <a href="https://github.com/Sanish1246/Webucp2025" class="card-link">
-                        <img src="./images/door.png" alt="Car" class="card-image">
-                        <hr>
-                        <h2 class="card-title">TheEnd.Page</h2>
-                        <p>A full stack website that allows users to create ad shares their goodbye messages. Made for the 24H by Webcup 2025
-                        </p>
-                        <button class="card-button">
-                            <span class="material-symbols-rounded">arrow_forward</span>
-                        </button>
-                    </a>
-                </li>
-                <li class="card-item swiper-slide">
-                    <a href="https://github.com/Sanish1246/driving-school-booking-system" class="card-link">
-                        <img src="./images/car.png" alt="Car" class="card-image">
-                        <hr>
-                        <h2 class="card-title">Booking software</h2>
-                        <p>A driving lesson booking system, written in C#.Net 8.0, Winforms and communication to an SQL database
-                        </p>
-                        <button class="card-button">
-                            <span class="material-symbols-rounded">arrow_forward</span>
-                        </button>
-                    </a>
-                </li>
-                <li class="card-item swiper-slide">
-                    <a href="https://github.com/Sanish1246/Single-page-social-networking-site" class="card-link">
-                        <img src="./images/person.png" alt="Person" class="card-image">
-                        <hr>
-                        <h2 class="card-title">Social media site</h2>
-                        <p>A full-stack social networking website implemented with JavaScript, Node.js, Express.js and communication with MongoDB
-                        </p>
-                        <button class="card-button">
-                            <span class="material-symbols-rounded">arrow_forward</span>
-                        </button>
-                    </a>
-                </li>
-                <li class="card-item swiper-slide">
-                    <a href="https://www.youtube.com/watch?v=cNf17yKGV18" class="card-link">
-                        <img src="./images/knife.png" alt="Restaurant" class="card-image">
-                        <hr>
-                        <h2 class="card-title">Monster restaurant</h2>
-                        <p>An award-winning website for a restaurant for zombies and mummies, made with HTML, CSS, JavaScript and Node.js for the 2024 Webcup. 
-                        </p>
-                        <button class="card-button">
-                            <span class="material-symbols-rounded">arrow_forward</span>
-                        </button>
-                    </a>
-                </li>
-            </ul>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-slide-button swiper-button-prev"></div>
-            <div class="swiper-slide-button swiper-button-next"></div>
-        </div>
+      <div class="title" data-aos="fade-up" data-aos-duration="1200">
+        <span>Recent Projects</span>
+      </div>
+      <div class="content">
+        <ul
+          class="card-list swiper-wrapper"
+          data-aos="fade-down"
+          data-aos-duration="1200"
+          data-aos-delay="200"
+        >
+          <li class="card-item swiper-slide">
+            <a
+              href="https://github.com/ieeemumsb/Web-Wizards"
+              class="card-link"
+            >
+              <img src="./images/marvel.png" alt="Person" class="card-image" />
+              <hr />
+              <h2 class="card-title">Marvel Multiverse</h2>
+              <p>
+                An award-winning website that allows user to explore features
+                based on Marvel heroes. Made for the 2025 IEEE MDXthon
+              </p>
+              <button class="card-button">
+                <span class="material-symbols-rounded">arrow_forward</span>
+              </button>
+            </a>
+          </li>
+          <li class="card-item swiper-slide">
+            <a
+              href="https://github.com/Sanish1246/Webucp2025"
+              class="card-link"
+            >
+              <img src="./images/door.png" alt="Car" class="card-image" />
+              <hr />
+              <h2 class="card-title">TheEnd.Page</h2>
+              <p>
+                A full stack website that allows users to create and share their
+                goodbye messages. Made for the 24H by Webcup 2025
+              </p>
+              <button class="card-button">
+                <span class="material-symbols-rounded">arrow_forward</span>
+              </button>
+            </a>
+          </li>
+          <li class="card-item swiper-slide">
+            <a
+              href="https://github.com/Sanish1246/driving-school-booking-system"
+              class="card-link"
+            >
+              <img src="./images/car.png" alt="Car" class="card-image" />
+              <hr />
+              <h2 class="card-title">Booking software</h2>
+              <p>
+                A driving lesson booking system, written in C#.Net 8.0, Winforms
+                and communication to an SQL database
+              </p>
+              <button class="card-button">
+                <span class="material-symbols-rounded">arrow_forward</span>
+              </button>
+            </a>
+          </li>
+          <li class="card-item swiper-slide">
+            <a
+              href="https://github.com/Sanish1246/Single-page-social-networking-site"
+              class="card-link"
+            >
+              <img src="./images/person.png" alt="Person" class="card-image" />
+              <hr />
+              <h2 class="card-title">Social media site</h2>
+              <p>
+                A full-stack social networking website implemented with
+                JavaScript, Node.js, Express.js and communication with MongoDB
+              </p>
+              <button class="card-button">
+                <span class="material-symbols-rounded">arrow_forward</span>
+              </button>
+            </a>
+          </li>
+        </ul>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-slide-button swiper-button-prev"></div>
+        <div class="swiper-slide-button swiper-button-next"></div>
+      </div>
     </section>
 
     <!--Contact section-->
     <section class="contact" id="contact">
-        <div class="content">
-            <div class="title" data-aos="fade-up" data-aos-duration="1200">
-                <span>Contact me</span>
-            </div>
-            <div class="contact-text" data-aos="flip-up" data-aos-duration="1200">
-                <i class="fa-solid fa-envelope"><span>sanishferrari@gmail.com</span></i>
-                <i class="fa-brands fa-solid fa-linkedin"><span>Sanish Coomar Ramlal</span></i>
-                <i class="fa-brands fa-solid fa-github"><span>Sanish1246</span></i>
-                <i class="fa-solid fa-location"><span>Mare Tabac, Mauritius</span></i>
-            </div>
+      <div class="content">
+        <div class="title" data-aos="fade-up" data-aos-duration="1200">
+          <span>Contact me</span>
         </div>
+        <div class="contact-text" data-aos="flip-up" data-aos-duration="1200">
+          <i class="fa-solid fa-envelope"
+            ><span>sanishferrari@gmail.com</span></i
+          >
+          <i class="fa-brands fa-solid fa-linkedin"
+            ><span>Sanish Coomar Ramlal</span></i
+          >
+          <i class="fa-brands fa-solid fa-github"><span>Sanish1246</span></i>
+          <i class="fa-solid fa-location"><span>Mare Tabac, Mauritius</span></i>
+        </div>
+      </div>
     </section>
 
     <footer>
-        <div class="text">
-            <span>Made by Sanish Coomar Ramlal || 2024</span>
-        </div>
+      <div class="text">
+        <span>Made by Sanish Coomar Ramlal || 2025</span>
+      </div>
     </footer>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init({offset:0});
+      AOS.init({ offset: 0 });
     </script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
