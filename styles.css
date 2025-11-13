@@ -366,8 +366,8 @@ section .topic {
 }
 
 .skills-details .boxes .per {
-  font-size: 60px;
-  color: hsl(0, 100%, 55%);
+  font-size: 40px;
+  color: hsl(0, 100%, 60%);
 }
 
 /*Services section*/
